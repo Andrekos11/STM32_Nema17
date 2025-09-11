@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+//#include "Stepper.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,12 +56,12 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void setStepsFreq(uint32_t arr) {
+/*void setStepsFreq(uint32_t arr) {
     __HAL_TIM_DISABLE(&htim1);                         // Ferma il timer
     __HAL_TIM_SET_AUTORELOAD(&htim1, arr);             // Imposta ARR
     __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, arr/2); // Imposta duty cycle
     __HAL_TIM_ENABLE(&htim1);                          // Riavvia il timer
-}
+}*/
 /* USER CODE END 0 */
 
 /**
@@ -86,6 +86,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
 
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -99,10 +100,9 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_TIM1_Init();
-
-
-  HAL_TIM_PWM_Start(&htim1, TIM1);
   /* USER CODE BEGIN 2 */
+
+  //Stepper Nema(1, 200);
 
   /*void delay_us(uint32_t us) {
       uint32_t start = DWT->CYCCNT;
@@ -127,16 +127,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  // motore avanti
-	  for (uint32_t p = 3000; p > 1000; p-=50) {
-	      setStepsFreq(p);
-	      HAL_Delay(50);
-	  }
-	  HAL_Delay(3000);
-	  for (uint32_t p = 1000; p < 3000; p+=50) {
-	  	      setStepsFreq(p);
-	  	      HAL_Delay(50);
-	  	  }
 
     /* USER CODE BEGIN 3 */
   }

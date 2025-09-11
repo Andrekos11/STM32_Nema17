@@ -1,37 +1,22 @@
-23:16:42 **** Incremental Build of configuration Debug for project StepperControl ****
+18:14:45 **** Incremental Build of configuration Debug for project StepperControl ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:130,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
-                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Core/Src/main.c: In function 'main':
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:672:29: warning: passing argument 2 of 'HAL_TIM_PWM_Start' makes integer from pointer without a cast [-Wint-conversion]
-  672 | #define TIM1                ((TIM_TypeDef *)TIM1_BASE)
-      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                             |
-      |                             TIM_TypeDef *
-../Core/Src/main.c:104:29: note: in expansion of macro 'TIM1'
-  104 |   HAL_TIM_PWM_Start(&htim1, TIM1);
-      |                             ^~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:334:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1938:71: note: expected 'uint32_t' {aka 'long unsigned int'} but argument is of type 'TIM_TypeDef *'
- 1938 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
-      |                                                              ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
 arm-none-eabi-gcc -o "StepperControl.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Andrea\Desktop\PERSONALE\MIO\LawnMower\BassoLivello\StepperControl\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="StepperControl.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: StepperControl.elf
  
 arm-none-eabi-size  StepperControl.elf 
 arm-none-eabi-objdump -h -S StepperControl.elf  > "StepperControl.list"
    text	   data	    bss	    dec	    hex	filename
-  12024	     12	   1716	  13752	   35b8	StepperControl.elf
+  11276	     12	   1716	  13004	   32cc	StepperControl.elf
 Finished building: default.size.stdout
  
 Finished building: StepperControl.list
  
 
-23:16:43 Build Finished. 0 errors, 1 warnings. (took 1s.288ms)
+18:14:48 Build Finished. 0 errors, 0 warnings. (took 3s.359ms)
 

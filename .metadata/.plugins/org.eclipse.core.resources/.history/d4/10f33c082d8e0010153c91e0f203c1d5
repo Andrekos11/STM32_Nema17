@@ -1,0 +1,16 @@
+/*
+ * Stepper.c
+ *
+ *  Created on: Sep 10, 2025
+ *      Author: Andrea
+ */
+#include "Stepper.h"
+
+
+class Stepper(){
+public:
+	int8_t id;
+	int32_t resolution;
+	Stepper Stepper (int8_t ID, int32_t Resolution);
+
+}
