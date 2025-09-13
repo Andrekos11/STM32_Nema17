@@ -1,0 +1,5 @@
+../Core/Src/Stepper.cpp:11:1:Stepper::Stepper(int8_t, int32_t, float)	24	static
+../Core/Src/Stepper.cpp:25:6:void Stepper::ProfileVelocity()	40	static
+../Core/Src/Stepper.cpp:41:6:void Stepper::QuickStop()	16	static
+../Core/Src/Stepper.cpp:51:6:void Stepper::setStepsFreq(float)	24	static
+../Core/Src/Stepper.cpp:70:7:float Stepper::Rpm_to_StepS(float)	16	static

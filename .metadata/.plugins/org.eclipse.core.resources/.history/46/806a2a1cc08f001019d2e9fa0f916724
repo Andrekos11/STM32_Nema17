@@ -1,0 +1,48 @@
+/*
+ * Stepper.h
+ *
+ *  Created on: Sep 10, 2025
+ *      Author: Andrea
+ */
+#include <stdint.h>
+#include "tim.h"
+//#include <map>
+
+#ifndef INC_STEPPER_H_
+#define INC_STEPPER_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+class Stepper {
+	public:
+		int8_t id;
+		int32_t resolution;       //200
+		int32_t Current_Speed;  //RPM
+		int32_t Target_Speed;   //RPM
+		int32_t Acceleration;   //RPM/s
+
+		uint32_t last_update = 0;
+
+		Stepper (int8_t ID, int32_t Resolution, int32_t Acc);
+
+
+		void ProfileVelocity();
+		void PositionMode (int32_t Position);
+		void QuickStop();
+		void ResetMotor();
+		int32_t Rpm_to_StepS(int32_t rpm);
+
+	private:
+		//void Acceleration ();
+		void setStepsFreq(uint32_t arr);
+};
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_STEPPER_H_ */
