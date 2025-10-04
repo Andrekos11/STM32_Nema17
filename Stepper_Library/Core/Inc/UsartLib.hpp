@@ -1,0 +1,17 @@
+/*
+ * UsartLib.hpp
+ *
+ *  Created on: Oct 4, 2025
+ *      Author: Andrea
+ */
+
+#ifndef INC_USARTLIB_HPP_
+#define INC_USARTLIB_HPP_
+
+#include <stdint.h>
+
+void UARTStream_Init(void);   // chiama questa da MX_FREERTOS_Init()
+void UARTStream_ProcessMessage(uint8_t *msg, uint8_t len); // callback per processare messaggi
+
+
+#endif /* INC_USARTLIB_HPP_ */

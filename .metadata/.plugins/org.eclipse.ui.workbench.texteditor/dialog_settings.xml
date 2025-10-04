@@ -6,6 +6,11 @@
 		<item value="Target_Speed"/>
 	</list>
 	<list key="searchhistory">
+		<item value="IRQHandler"/>
+		<item value="void usart1"/>
+		<item value="void USART"/>
+		<item value="void USART1_IRQ"/>
+		<item value="HAL_UART_Rx"/>
 		<item value="rpm"/>
 	</list>
 </section>

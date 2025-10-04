@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Stepper_Library/Core/Src/UsartLib&apos; to &apos;UsartLib.cpp&apos;" description="Rename resource &apos;UsartLib&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/UsartLib" name="UsartLib.cpp" stamp="1759585881912" updateReferences="true"/>
+</session>
