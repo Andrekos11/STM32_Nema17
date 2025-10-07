@@ -1,6 +1,0 @@
-../Core/Src/UsartLib.cpp:42:6:void UARTStream_Init()	24	static
-../Core/Src/UsartLib.cpp:70:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	32	static,ignoring_inline_asm
-../Core/Src/UsartLib.cpp:99:6:void HAL_UART_ErrorCallback(UART_HandleTypeDef*)	16	static
-../Core/Src/UsartLib.cpp:107:13:void vAnalyzerTask(void*)	1056	static
-../Core/Src/UsartLib.cpp:162:13:void internal_processMessage(uint8_t*, uint8_t)	152	static
-../Core/Src/UsartLib.cpp:175:6:void UARTStream_ProcessMessage(uint8_t*, uint8_t)	16	static

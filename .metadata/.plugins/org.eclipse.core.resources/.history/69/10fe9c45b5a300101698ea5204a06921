@@ -1,0 +1,22 @@
+/*
+ * ComunicationLib.hpp
+ *
+ *  Created on: Oct 7, 2025
+ *      Author: Andrea
+ */
+
+#ifndef INC_COMUNICATIONLIB_HPP_
+#define INC_COMUNICATIONLIB_HPP_
+
+#include "Stepper.hpp"
+
+class UART{
+	public:
+		uint8_t
+	private:
+
+};
+
+
+
+#endif /* INC_COMUNICATIONLIB_HPP_ */

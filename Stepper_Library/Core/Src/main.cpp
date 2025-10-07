@@ -18,16 +18,16 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include <main.h>
+#include <usart.h>
 #include "tim.h"
-#include "usart.h"
 #include "gpio.h"
-#include "cmsis_os.h"
+
 
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Stepper.hpp"
-#include "freertos.h"
+#include "ComunicationLib.hpp"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +53,6 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -92,13 +91,10 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   MX_USART1_UART_Init();
-  /* Call init function for freertos objects (in cmsis_os2.c) */
-  MX_FREERTOS_Init();
 
-  /* Start scheduler */
-  osKernelStart();
   /* USER CODE BEGIN 2 */
-  Stepper Nema(1, 200, 100);
+  HAL_UART_Receive_IT(&huart1, Uart1.rx_buffer, Uart1.BufferLen);
+  //Stepper Nema(1, 200, 100);
 
 
 //  HAL_Delay(3000);
@@ -110,8 +106,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  Nema.ProfileVelocity();
-	  HAL_Delay(1);
+	  //Nema.ProfileVelocity();
+	 // HAL_Delay(1);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

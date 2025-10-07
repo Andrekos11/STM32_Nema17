@@ -1,0 +1,17 @@
+/*
+ * ComunicationLib.cpp
+ *
+ *  Created on: Oct 7, 2025
+ *      Author: Andrea
+ */
+#include "ComunicationLib.hpp"
+
+
+
+USART::USART (uint8_t Header, uint8_t ClosingBit){
+	header = Header;
+	closing_bit = ClosingBit;
+	for(int i=0; i<BufferLen; i++){
+		rx_buffer[i]=0x00;
+	}
+}

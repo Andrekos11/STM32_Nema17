@@ -1,7 +1,14 @@
-16:45:30 **** Incremental Build of configuration Debug for project Stepper_Library ****
+22:48:06 **** Incremental Build of configuration Debug for project Stepper_Library ****
 make -j8 all 
+arm-none-eabi-g++ "../Core/Src/ComunicationLib.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ComunicationLib.d" -MT"Core/Src/ComunicationLib.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ComunicationLib.o"
+arm-none-eabi-g++ -o "Stepper_Library.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Andrea\Desktop\PERSONALE\MIO\LawnMower\BassoLivello\Stepper_Library\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stepper_Library.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Stepper_Library.elf
+ 
 arm-none-eabi-size  Stepper_Library.elf 
+arm-none-eabi-objdump -h -S Stepper_Library.elf  > "Stepper_Library.list"
    text	   data	    bss	    dec	    hex	filename
-  34008	     96	   8752	  42856	   a768	Stepper_Library.elf
+  12616	     12	   1900	  14528	   38c0	Stepper_Library.elf
 Finished building: default.size.stdout
+ 
+Finished building: Stepper_Library.list
  

@@ -1,0 +1,7 @@
+../Core/Inc/Stepper.hpp:29:3:Stepper::Stepper()	1
+../Core/Src/ComunicationLib.cpp:11:1:MyUSART::MyUSART(uint8_t, uint8_t)	2
+../Core/Src/ComunicationLib.cpp:23:6:void MyUSART::Analyse_msg()	5
+../Core/Src/ComunicationLib.cpp:35:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	2
+../Core/Src/ComunicationLib.cpp:46:7:float MyUSART::FloatExtraction(const uint8_t*, int)	1
+../Core/Src/ComunicationLib.cpp:50:1:void __static_initialization_and_destruction_0()	2
+../Core/Src/ComunicationLib.cpp:50:1:cpp)	1

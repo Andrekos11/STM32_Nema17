@@ -6,12 +6,13 @@
  */
 #include <stdint.h>
 #include "tim.h"
+#include <cstring>
+
 
 //#include <map>
 
 #ifndef INC_STEPPER_H_
 #define INC_STEPPER_H_
-
 
 
 class Stepper {
@@ -25,7 +26,7 @@ class Stepper {
 		float Actual_position=0;
 		float Target_position=0;
 		uint32_t last_update = 0;
-
+		Stepper(){}
 		Stepper (int8_t ID, int32_t Resolution, float Acc);			//Constructor
 
 
