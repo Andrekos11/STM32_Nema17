@@ -1,9 +1,0 @@
-../Core/Src/Stepper.cpp:11:1:Stepper::Stepper(int8_t, int32_t, float)	1
-../Core/Src/Stepper.cpp:21:6:void Stepper::SetAcceleration(float)	1
-../Core/Src/Stepper.cpp:25:6:void Stepper::SetVelocity(float)	1
-../Core/Src/Stepper.cpp:32:6:void Stepper::ProfileVelocity()	5
-../Core/Src/Stepper.cpp:48:6:void Stepper::ProfilePosition(int32_t)	1
-../Core/Src/Stepper.cpp:55:6:void Stepper::QuickStop()	3
-../Core/Src/Stepper.cpp:64:6:void Stepper::setStepsFreq(float)	7
-../Core/Src/Stepper.cpp:82:7:float Stepper::Rpm_to_StepS(float)	1
-../Core/Src/Stepper.cpp:86:7:float Stepper::Angle_to_steps(float)	1
