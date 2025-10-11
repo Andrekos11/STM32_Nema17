@@ -1,5 +1,6 @@
 "./Core/Src/ComunicationLib.o"
 "./Core/Src/Stepper.o"
+"./Core/Src/cpp_wrapper.o"
 "./Core/Src/gpio.o"
 "./Core/Src/main.o"
 "./Core/Src/stm32f1xx_hal_msp.o"

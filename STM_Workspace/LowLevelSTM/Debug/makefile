@@ -84,8 +84,8 @@ all: main-build
 main-build: LowLevelSTM.elf secondary-outputs
 
 # Tool invocations
-LowLevelSTM.elf LowLevelSTM.map: $(OBJS) $(USER_OBJS) C:\Users\Andrea\Desktop\PERSONALE\MIO\LawnMower\STM_Workspace\LowLevelSTM\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "LowLevelSTM.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Andrea\Desktop\PERSONALE\MIO\LawnMower\STM_Workspace\LowLevelSTM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LowLevelSTM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+LowLevelSTM.elf LowLevelSTM.map: $(OBJS) $(USER_OBJS) C:\Users\Andrea\Desktop\PERSONALE\MIO\LawnMower\BassoLivello\STM_Workspace\LowLevelSTM\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "LowLevelSTM.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Andrea\Desktop\PERSONALE\MIO\LawnMower\BassoLivello\STM_Workspace\LowLevelSTM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LowLevelSTM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
